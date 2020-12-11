@@ -1,28 +1,40 @@
-var s =[];
-var c =[];
-var t =[];
-var g =[];
+var s =[];//subject
+var c =[];//code
+var t =[];//term
+var g =[];//grade
 var n = 0;
-document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector('form').onsubmit = function () {
-        var allSub = document.querySelector('#allSub');
-        var subject = document.querySelector('#subject').value;
-        var code = document.querySelector('#code').value;
-        var term = document.querySelector('#term').value;
-        var grade = document.querySelector('#grade').value;
+
+function newSub(){
+    var allSub = document.querySelector('#allSub');
+        var subject = document.querySelector('#subject');
+        var code = document.querySelector('#code');
+        var term = document.querySelector('#term');
+        var grade = document.querySelector('#grade');
 
         var line = document.createElement('li');
         var text = document.createElement('span');
-        text.innerHTML = subject +"("+code+") term "+term+" Grade "+grade;
+        text.innerHTML = subject.value +"("+code.value+") term "+term.value+" Grade "+grade.value;
     
         line.append(text);
         allSub.append(line);
-        
-        subject.value =" ";
-        code.value =" ";
-        term.value =" ";
-        grade.value=" ";
-    
-        return false;
-    };
-});
+
+        //store data
+        s[n] = subject.value;
+        c[n] = parseInt(code.value);
+        t[n] = term.value;
+        g[n] = parseFloat(grade.value);
+        n++;
+        //clear input
+        subject.value =' ';
+        code.value ='';
+        term.value='';
+        grade.value='';
+}
+
+function calAll(){
+    var num;
+    for(var i;i<n;i++){
+        num+=grade[i];
+    }
+    alert(num/n);
+}
