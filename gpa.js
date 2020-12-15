@@ -15,7 +15,7 @@ function newSub(){
 
         var line = document.createElement('li');
         var text = document.createElement('span');
-        text.innerHTML = subject.value +"("+code.value+") term "+term.value+"unit "+unit.value+"Grade "+grade.value;
+        text.innerHTML = subject.value +"("+code.value+") term"+term.value+" unit"+unit.value+" Grade "+grade.value;
     
         line.append(text);
         allSub.append(line);

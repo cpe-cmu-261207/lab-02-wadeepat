@@ -3,18 +3,23 @@
 <head>
     <title>GPA Calculate</title>
     <script src="gpa.js"></script>
+    <link rel="stylesheet" href="gpa.css">
 </head>
 <body>
-    <h3 align="center">GPA</h3>
+    <h3 align="center" >GPA</h3>
     <form id="addSub">
-        <p>ชื่อวิชา <input type="text" id="subject"></p>
-        <p>รหัสวิชา <input type="text" id="code"></p>
-        <p>ภาคเรียน <input type="text" id="term"></p>
-        <p>หน่วยกิต <input type="text" id="unit"></p>
-        <p>เกรดที่ได้รับ <input type="text" id="grade"></p>
-        <button id="sumbit" type = "button" onclick="newSub()">submit</button>
-        <button id="gpaAll" type ="button" onclick="calAll()">เกรดเฉลี่ยรวม</button>
-        <button id="gpaMajor" type ="button" onclick="calMajor()">เกรดเฉลี่ยวิชาเมเจอร์</button>
+        <p align ="center">
+            ชื่อวิชา <input type="text" id="subject">
+            รหัสวิชา <input type="text" id="code">
+            ภาคเรียน <input type="text" id="term">
+            หน่วยกิต <input type="text" id="unit">
+            เกรดที่ได้รับ <input type="text" id="grade">
+        </p>
+        <p align ="center">
+            <button id="sumbit" type = "button" onclick="newSub()">submit</button>
+            <button id="gpaAll" type ="button" onclick="calAll()">เกรดเฉลี่ยรวม</button>
+            <button id="gpaMajor" type ="button" onclick="calMajor()">เกรดเฉลี่ยวิชาเมเจอร์</button>
+        </p>
     </form>
     <ul id="allSub"></ul>
     

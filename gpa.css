@@ -1,0 +1,30 @@
+ul{
+    list-style-type:none;
+    text-align: center;
+    font-family: Lucida Console;
+}
+p{
+    font-family: Lucida Console;
+}
+body{
+    background-color: #effad3;
+}
+h3{
+    font-family: Lucida Console;
+    font-size: 30px;
+}
+input[type=text] {
+    border: none;
+    border-radius: 4px;
+}
+button {
+    background-color:#2f6187; /* Green */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
